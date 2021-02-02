@@ -1,0 +1,8 @@
+四种错误消息：
+1、ICMP destination network unreachable -- 转发表中匹配不到目的IP
+2、ICMP time exceeded                   -- 转发数据包的ttl-1后为0
+3、ICMP destination host unreachable    -- 对下一跳或目标主机的ARP请求失败（超过5次）
+4、ICMP destination port unreachable    -- ICMP类型不是echo request
+
+处理方式：
+将错误信息发送回原数据包的source IP
